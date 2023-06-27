@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Nyilynnhtwe - Backend Developer</title>
-    <meta name="description" content="Nyi LynnHtwe - Backend Developer specializing in Node.js, Nest.js, MongoDB, and MySQL. Creating efficient and scalable solutions for seamless user experiences. Let's connect and create robust web applications together.">
+    <meta name="description"
+        content="Nyi LynnHtwe - Backend Developer specializing in Node.js, Nest.js, MongoDB, and MySQL. Creating efficient and scalable solutions for seamless user experiences. Let's connect and create robust web applications together.">
     <meta name="keywords" content="backend developer, Node.js, Nest.js, MongoDB, MySQL, RESTful APIs, web development">
     <style>
         body {
@@ -14,7 +16,28 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #F0F0F0;
         }
+
+        .navbar {
+            background-color: #333;
+            overflow: auto;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: rgb(218, 216, 216);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
 
         header {
             background-color: #f2f2f2;
@@ -32,83 +55,128 @@
             object-fit: cover;
             margin-bottom: 20px;
         }
-        
-        h1 {
-            font-size: 32px;
+
+        h1,
+        h2,
+        h3 {
             color: #333;
         }
-        
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
         main {
             max-width: 800px;
             margin: 20px auto;
-            padding: 0 20px;
+            padding: 0 30px;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
-        
-        h2 {
-            font-size: 24px;
-            color: #333;
+
+        section {
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
-        
-        p {
-            font-size: 16px;
+
+        p,
+        ul,
+        ol {
             color: #666;
+            line-height: 1.6;
         }
-        
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
+
+        ul,
+        ol {
+            padding-left: 30px;
         }
-        
-        li {
-            margin-bottom: 10px;
-        }
-        
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        
+
         footer {
             background-color: #f2f2f2;
             padding: 20px;
             text-align: center;
             font-size: 14px;
             color: #666;
+            margin-top: 20px;
+        }
+
+        a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        a:active {
+            color: #003680;
         }
     </style>
 </head>
+
 <body>
-    <header>
+    <div class="navbar">
+        <a href="#intro">Nyi Lynn Htwe</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="./todo.html">What am I doing</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <header id="intro">
         <h1>A Backend Dev</h1>
         <img class="profile-picture" src="pp.jpeg" alt="Profile Picture of Nyi LynnHtwe">
     </header>
-    
+
+
+
+
+
     <main>
-        
-        <section>
+
+        <section id="about-me">
             <h2>About Me</h2>
             <ul>
                 <li>
-                    I'm Nyi LynnHtwe, a passionate <b>Backend Developer</b> specializing in <u>Node.js</u>, <u>Nest.js</u>,<u>MongoDB</u> and <u>MySQL</u>.
-                </li>
-    
-                <li>
-                    With a focus on efficient and scalable solutions, I optimize backend processes and tackle complex challenges.
-                </li>
-                    
-                <li>
-                    Experienced in RESTful APIs, databases, and third-party integrations, I collaborate with frontend developers for seamless user experiences.
+                    I'm Nyi LynnHtwe, a passionate <b>Backend Developer</b> specializing in <u>Node.js</u>,
+                    <u>Nest.js</u>,<u>MongoDB</u> and <u>MySQL</u>.
                 </li>
 
                 <li>
-                    I believe in clean code, documentation, and continuous learning. Based in Yangon, Myanmar, I seek opportunities to contribute my backend expertise and drive organizational success. Let's connect and create robust web applications together.
+                    With a focus on efficient and scalable solutions, I optimize backend processes and tackle complex
+                    challenges.
+                </li>
+
+                <li>
+                    Experienced in RESTful APIs, databases, and third-party integrations, I collaborate with frontend
+                    developers for seamless user experiences.
+                </li>
+
+                <li>
+                    I believe in clean code, documentation, and continuous learning. Based in Yangon, Myanmar, I seek
+                    opportunities to contribute my backend expertise and drive organizational success. Let's connect and
+                    create robust web applications together.
                 </li>
 
             </ul>
         </section>
-        
-        
-        <section>
+
+
+        <section id="skills">
             <h2>Skills</h2>
             <ul>
                 <li>Node.js</li>
@@ -118,8 +186,8 @@
                 <li>Testing and Debugging</li>
             </ul>
         </section>
-        
-        <section>
+
+        <section id="certifications">
             <h2>Certifications</h2>
             <ul>
                 <li>EF SET Certificate (C1 Advanced)</li>
@@ -129,9 +197,9 @@
                 <li>Building Web Applications in Django</li>
             </ul>
         </section>
-        
-        
-        <section>
+
+
+        <section id="experience">
             <h2>Experience</h2>
             <ol>
                 <li>
@@ -148,7 +216,7 @@
                         <br>
                         - Implemented database management and optimized database queries for improved performance.
                         <br>
-                      
+
                     </p>
                 </li>
                 <li>
@@ -156,30 +224,32 @@
                     <p>Instructor</p>
                     <p>November 2021 - February 2022 (4 months)</p>
                     <p>Remote</p>
-                    <p>My first part-time job and it was work-from-home. A good friendly environment. I got invaluable experiences. Teaching Programming Basics to kids is fun.</p>
+                    <p>My first part-time job and it was work-from-home. A good friendly environment. I got invaluable
+                        experiences. Teaching Programming Basics to kids is fun.</p>
                 </li>
             </ol>
         </section>
-        
-        <section>
+
+        <section id="education">
             <h2>Education</h2>
             <p>University of Computer Studies, Mandalay</p>
             <p>2018 - 2020</p>
             <p>Computer Science</p>
         </section>
 
-        <section>
+        <section id="contact">
             <h2>Contact</h2>
             <p>Email: nyilynnhtwe@gmail.com</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/nyilynnhtwe">Connect with me on LinkedIn</a></p>
             <p>Gitub: <a href="https://github.com/nyilynnhtwe" aria-label="GitHub">Let's contribute together</a></p>
             <p>LeetCode: <a href="leetcode.com/nyilynnhtwe" aria-label="LeetCode">nyilynnhtwe</a></p>
         </section>
-        
+
     </main>
-    
+
     <footer>
         <p>&copy; 2023 Nyi LynnHtwe</p>
     </footer>
 </body>
+
 </html>
