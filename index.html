@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.03);
+        }
+
+        section {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .web3 {
+            background-color: #e6f7ff;
+        }
+
+        .ai {
+            background-color: #ffe6e6;
+        }
+
+        .tech {
+            background-color: #e6ffe6;
+        }
+
+        .experience-item {
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 3px solid #007bff;
+        }
+
+        .education-item {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-used {
+            margin: 15px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tech-used span {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .project-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Add these styles to your existing CSS */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 1200px;
+            animation: zoom 0.3s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Hi, I'm Nyi Lynn Htwe</h1>
+            <p>IT Student | Web3 Enthusiast | AI Explorer</p>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a 24-year-old IT student with a strong interest in artificial intelligence and decentralized
+                technologies.<br /> I also enjoy photography as a creative outlet.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>University of Computer Studies (2018-2020)</p>
+            </div>
+
+            <div class="education-item">
+                <h3>Bachelor of Science in Information Technology</h3>
+                <p>Asia Pacific International University (2024-2027)</p>
+            </div>
+
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category web3">
+                    <h3>Web3</h3>
+                    <ul>
+                        <li>Ethereum</li>
+                        <li>Sui</li>
+                        <li>Solana</li>
+                    </ul>
+                </div>
+                <div class="skill-category ai">
+                    <h3>AI/ML</h3>
+                    <ul>
+                        <li>I am learning now</li>
+                    </ul>
+                </div>
+                <div class="skill-category tech">
+                    <h3>Technical</h3>
+                    <ul>
+                        <li>Typescript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>SQL/NoSQL</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Web3 Developer Intern</h3>
+                <p>BlockTech Solutions (Summer 2023)</p>
+                <ul>
+                    <li>Developed smart contracts for NFT marketplace</li>
+                    <li>Implemented blockchain-based authentication system</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>AI Research Assistant</h3>
+                <p>University AI Lab (2022-2023)</p>
+                <ul>
+                    <li>Assisted in developing computer vision models</li>
+                    <li>Optimized ML pipelines for image recognition</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>OceanFund</h3>
+                    <p>
+                        A transparent, decentralized crowdfunding platform built on Ethereum that leverages PYUSD for
+                        secure fundraising. OceanFund combines smart contract-based fundraising with a Next.js frontend
+                        to provide a fully verifiable and open way to support projects.
+                    </p>
+                    <div class="tech-used">
+                        <span>Solidity</span>
+                        <span>Ethereum</span>
+                        <span>PYUSD</span>
+                        <span>React</span>
+                        <span>Smart Contracts</span>
+                    </div>
+                    <a href="https://github.com/nyilynnhtwe/ocean_fund" class="project-link" target="_blank"
+                        rel="noopener noreferrer">
+                        View on GitHub
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>May Mal AI Agent</h3>
+                    <p>
+                        A multilingual AI assistant that breaks language barriers by understanding complex English
+                        content
+                        and translating it into your native language in real-time. It leverages advanced models with
+                        local-first processing for fast, accurate, and contextual translations.
+                    </p>
+                    <div class="tech-used">
+                        <span>Next.js</span>
+                        <span>Ollama</span>
+                        <span>DeepSeek R1</span>
+                        <span>Gemini 2.5 Pro</span>
+                        <span>React</span>
+                    </div>
+                    <a href="https://github.com/nyilynnhtwe/maymal-agent" class="project-link" target="_blank"
+                        rel="noopener noreferrer">
+                        View on GitHub
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>SharMalKwar</h3>
+                    <p>
+                        A Next.js application that runs entirely on your own PC, integrating a robust API layer with the
+                        Ollama library and Llama3.2 Vision model. This project processes images and text prompts
+                        locally, generates real-time responses with detailed time metrics, and eliminates any reliance
+                        on cloud dependencies.
+                    </p>
+                    <div class="tech-used">
+                        <span>Next.js</span>
+                        <span>Ollama</span>
+                        <span>Llama3.2 Vision</span>
+                        <span>Sharp</span>
+                        <span>React</span>
+                    </div>
+                    <a href="https://github.com/nyilynnhtwe/sharmalkwar" class="project-link" target="_blank"
+                        rel="noopener noreferrer">
+                        View on GitHub
+                    </a>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section id="photography">
+            <h2>Photography Showcase</h2>
+            <div class="photo-grid">
+                <!-- Replace with your photos -->
+                <img src="./photos/1.jpeg" alt="Sample 1">
+                <img src="./photos/2.jpeg" alt="Sample 2">
+                <img src="./photos/3.jpeg" alt="Sample 3">
+                <img src="./photos/4.jpeg" alt="Sample 4">
+                <img src="./photos/5.jpeg" alt="Sample 5">
+                <img src="./photos/6.jpeg" alt="Sample 6">
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: nyilynnhtwe@gmail.com</p>
+            <p>LinkedIn: linkedin.com/in/nyilynnhtwe</p>
+            <p>Github: github.com/nyilynnhtwe</p>
+            <p>Twitter: @lynnthelight</p>
+        </section>
+    </div>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="expandedImg">
+    </div>
+
+</body>
+<script>
+    // Add this JavaScript
+    document.querySelectorAll('.photo-grid img').forEach(img => {
+        img.onclick = function () {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("expandedImg");
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.style.width = "40%";
+            modalImg.alt = this.alt;
+        }
+    });
+
+    // Close modal
+    const modal = document.getElementById("imageModal");
+    const span = document.getElementsByClassName("close")[0];
+
+    span.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Close with ESC key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            modal.style.display = "none";
+        }
+    });
+</script>
+
+</html>
